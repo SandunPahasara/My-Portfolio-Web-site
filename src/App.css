@@ -1,0 +1,26 @@
+:root {
+  --primary: #2563eb;       /* Vibrant blue */
+  --primary-dark: #1d4ed8;
+  --secondary: #7c3aed;    /* Purple */
+  --dark: #1e293b;         /* Dark blue-gray */
+  --darker: #0f172a;
+  --light: #f8fafc;        /* Off-white */
+  --gray: #94a3b8;         /* Medium gray */
+  --success: #10b981;      /* Green */
+  --warning: #f59e0b;      /* Yellow */
+  --danger: #ef4444;       /* Red */
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--light);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
