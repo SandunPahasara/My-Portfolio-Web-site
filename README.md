@@ -31,23 +31,23 @@
 - [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer)
 
 
-
 ## 🏗️ Project Structure
+
+```
 src/
-├── assets/             # Images, fonts, icons
-├── components/         # Reusable UI components
+├── assets/              # Images, fonts, icons
+├── components/          # Reusable UI components
 │   ├── Header/
 │   ├── ProjectCard/
 │   └── ThemeToggle/
-├── constants/          # Data files
+├── constants/           # Data files
 │   ├── projects.js
 │   └── skills.js
-├── styles/             # Global CSS
-│   ├── base.css        # Variables and resets
-│   └── animations.css  # Keyframe animations
-└── App.js              # Root component
-
-
+├── styles/              # Global CSS
+│   ├── base.css         # Variables and resets
+│   └── animations.css   # Keyframe animations
+└── App.js               # Root component
+```
 
 ---
 
