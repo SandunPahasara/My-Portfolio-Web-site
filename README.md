@@ -1,33 +1,34 @@
 🌟 My Portfolio Website
-Portfolio Screenshot
+Portfolio 
+
+![image](https://github.com/user-attachments/assets/8c6e1089-42ed-42b5-a428-df9f80e8e28a)
+
 
 A modern, responsive developer portfolio showcasing my skills, projects, and professional journey. Built with React and custom CSS to demonstrate frontend expertise while maintaining clean, semantic code.
 
-🚀 Live Demo
-View Portfolio
-
 ✨ Key Features
-📱 Fully Responsive - Mobile-first design that works flawlessly on all devices
 
-✉️ Contact Form - Functional email submission via EmailJS integration
+    📱 Fully Responsive - Mobile-first design that works flawlessly on all devices
 
-🎨 Custom CSS - Clean, maintainable styling without frameworks
+    ✉️ Contact Form - Functional email submission via EmailJS integration
 
-⚡ Optimized Performance - 90+ Lighthouse scores
+    🎨 Custom CSS - Clean, maintainable styling without frameworks
 
-🌗 Theme Toggle - Light/dark mode with localStorage persistence
+    ⚡ Optimized Performance - 90+ Lighthouse scores
 
-📊 Project Showcase - Interactive gallery with filtering options
+    🌗 Theme Toggle - Light/dark mode with localStorage persistence
+
+    📊 Project Showcase - Interactive gallery with filtering options
 
 🛠️ Technologies Used
-Core Technologies
-Technology	Purpose
-React	Component-based UI
-EmailJS	Contact form functionality
-Framer Motion	Smooth animations
-React Icons	Scalable vector icons
-Styling
-Custom CSS with BEM methodology
+    Core Technologies
+    Technology	Purpose
+    React	Component-based UI
+    EmailJS	Contact form functionality
+    Framer Motion	Smooth animations
+    React Icons	Scalable vector icons
+    Styling
+    Custom CSS with BEM methodology
 
 CSS Variables for theming
 
