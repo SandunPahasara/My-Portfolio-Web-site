@@ -24,3 +24,70 @@ html {
   scroll-behavior: smooth;
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@media (max-width: 1024px) {
+  .footer-content {
+    padding: 0 40px;
+  }
+
+  .footer-links {
+    gap: 1.5rem;
+  }
+
+  .policy-popup {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .policy-popup {
+    width: 250px;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .policy-popup::after {
+    left: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+
+  .social-icons a {
+    font-size: 1.3rem;
+  }
+
+  .policy-popup {
+    width: 220px;
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    gap: 0.8rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+}
+
