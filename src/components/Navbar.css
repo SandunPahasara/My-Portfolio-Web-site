@@ -1,3 +1,4 @@
+/* Navbar Styles */
 .navbar {
   background-color: #ffffff;
   height: 80px;
@@ -27,6 +28,13 @@
   font-weight: 700;
   display: flex;
   align-items: center;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #2c3e50;
 }
 
 .nav-menu {
@@ -70,20 +78,60 @@
   width: 100%;
 }
 
-/* Mobile responsiveness */
+/* ========== Responsive Styles ========== */
+
+/* Tablets */
 @media screen and (max-width: 960px) {
   .navbar {
     height: 70px;
   }
-  
+
   .navbar-logo {
     font-size: 1.5rem;
   }
-  
+
   .nav-links {
     font-size: 1rem;
   }
 }
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    padding: 1rem 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-links {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links:hover {
+    background-color: #f1f1f1;
+    color: #3498db;
+  }
+}
+
+/* Footer (you already had this) */
 @media (max-width: 1024px) {
   .footer-content {
     padding: 0 40px;
