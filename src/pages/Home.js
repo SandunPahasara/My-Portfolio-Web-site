@@ -50,10 +50,11 @@ const Home = () => {
           >
             Explore My Work
           </button>
-          <a 
-            href="/W. A. S. P. Weerasinghe - CV.pdf" 
-            download 
+          <a
+            href={`${process.env.PUBLIC_URL}/SandunPahasara-CV2.pdf`}
+            download="SandunPahasara-CV2.pdf"
             className="btn-secondary"
+            aria-label="Download Sandun Pahasara CV"
           >
             <FaFileDownload className="icon" /> Download CV
           </a>
