@@ -4,6 +4,22 @@ import { FiExternalLink, FiGithub } from 'react-icons/fi';
 const projectData = [
   {
     id: 1,
+    title: "Smart Garment Production Tracking & Optimization System (SGPTOS)",
+    description: "A comprehensive Final Year Project for the garment manufacturing industry that integrates RFID-based tracking, IoT-enabled machine monitoring, real-time analytics, and automated quality control to streamline production workflows, improve efficiency, and reduce operational costs.",
+    technologies: ["React", "PHP", "MySQL", "RFID Technology", "IoT Sensors", "Cloud Analytics"],
+    features: [
+      "RFID-based real-time garment tracking from cutting to packaging",
+      "Workforce monitoring with labor efficiency tracking",
+      "IoT-enabled predictive machine maintenance alerts",
+      "Centralized analytics dashboard for KPIs and defect analysis",
+      "Quality control and defect tracking system",
+      "Role-specific interfaces for managers, supervisors, and workers"
+    ],
+    githubLink: "https://github.com/SasinduV0/SGPTOS-FinalProject",
+    badge: "Group Project • Final Year"
+  },
+  {
+    id: 2,
     title: "Web Based Conference Management System",
     description: "A Web-Based Conference Management System for organizing and managing conference schedules, speakers, and attendees efficiently.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -15,10 +31,9 @@ const projectData = [
       " Admin Dashboard for Management "
     ],
     githubLink: "https://github.com/SandunPahasara/Web-Based-Conference-Day-Management-System",
-    liveLink: " https://sandunpahasara.github.io/Web-Based-Conference-Day-Management-System/"
   },
   {
-    id: 2,
+    id: 3,
     title: "Library-Management-System",
     description: "A simple Python-based Library Management System for adding, borrowing, and returning books.",
     technologies: ["Python Datetime module"],
@@ -29,10 +44,9 @@ const projectData = [
       " User-friendly menu interface "
     ],
     githubLink: "https://github.com/SandunPahasara/-Library-Management-System",
-    liveLink: " https://sandunpahasara.github.io/-Library-Management-System/"
   },
   {
-    id: 3,
+    id: 4,
     title: "Calculator",
     description: "A visually appealing console-based calculator in Java featuring: Colorful ANSI console output Clean, user-friendly interface Basic arithmetic operations Error handling and input validation Beautiful ASCII art formatting Features",
     technologies: ["Java"],
@@ -43,7 +57,6 @@ const projectData = [
       "Division"
     ],
     githubLink: "https://github.com/SandunPahasara/Calculator",
-    liveLink: "https://github.com/SandunPahasara/Calculator"
   }
 ];
 
@@ -60,6 +73,7 @@ const Projects = () => {
           <div key={project.id} className="project-card">
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
+              {project.badge && <span className="project-badge">{project.badge}</span>}
               <p className="project-description">{project.description}</p>
               
               <div className="project-features">
