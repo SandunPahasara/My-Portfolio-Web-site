@@ -1,19 +1,12 @@
 import './Home.css';
-import { useNavigate } from 'react-router-dom';
 import { FaFileDownload } from 'react-icons/fa';
 
 const Home = () => {
-  const navigate = useNavigate();
-
   const handleExploreClick = () => {
-    // Navigate directly to the projects section
-    navigate('/projects'); // This assumes you have a route for projects
-    
-    // OR if projects is a tab on your main page:
-    // navigate('/#projects'); // For hash-based navigation
-    
-    // OR if using tab state:
-    // navigate('/', { state: { activeTab: 'projects' } });
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
