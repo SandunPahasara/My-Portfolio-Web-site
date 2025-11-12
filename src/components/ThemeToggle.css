@@ -1,0 +1,80 @@
+.theme-toggle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid var(--theme-toggle-border, #e0e0e0);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: var(--theme-toggle-hover-bg, rgba(0, 0, 0, 0.05));
+  border-color: var(--theme-toggle-hover-border, #3b82f6);
+  transform: scale(1.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-icon {
+  font-size: 1.4rem;
+  color: var(--theme-icon-color, #333);
+  transition: all 0.3s ease;
+}
+
+.sun-icon {
+  color: #f59e0b;
+  animation: rotate 20s linear infinite;
+}
+
+.moon-icon {
+  color: #6366f1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Dark mode specific styles */
+[data-theme="dark"] .theme-toggle {
+  border-color: #4b5563;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #f59e0b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .theme-toggle {
+    width: 45px;
+    height: 45px;
+  }
+
+  .theme-icon {
+    font-size: 1.2rem;
+  }
+}
