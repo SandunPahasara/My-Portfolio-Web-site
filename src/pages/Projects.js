@@ -68,6 +68,22 @@ const projectData = [
   },
   {
     id: 5,
+    title: "Real-Time Weather Alerts App",
+    description: "A React-based Weather Alerts App that provides real-time weather alerts for your location using the OpenWeatherMap API. Stay informed about severe weather, warnings, and other weather events instantly with smooth animated notifications.",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "OpenWeatherMap API"],
+    features: [
+      "Real-time weather alerts with automatic updates",
+      "Dismissible alerts with smooth animation",
+      "Modern responsive UI built with Tailwind CSS",
+      "Animated notifications using Framer Motion",
+      "Customizable locations (latitude/longitude)",
+      "Type-safe code with TypeScript"
+    ],
+    githubLink: "https://github.com/SandunPahasara/Weather-Alerts-App",
+    liveLink: "https://github.com/SandunPahasara/Weather-Alerts-App"
+  },
+  {
+    id: 6,
     title: "Beautiful Counter",
     description: "A modern, interactive counter application built with React and Ant Design, demonstrating state management, UI theming, and user experience best practices with a clean, customizable interface.",
     technologies: ["React", "Ant Design", "JavaScript (ES6+)", "CSS"],
@@ -82,7 +98,7 @@ const projectData = [
     githubLink: "https://github.com/SandunPahasara/Counter",
   },
   {
-    id: 6,
+    id: 7,
     title: "Web Based Conference Management System",
     description: "A Web-Based Conference Management System for organizing and managing conference schedules, speakers, and attendees efficiently.",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -96,7 +112,7 @@ const projectData = [
     githubLink: "https://github.com/SandunPahasara/Web-Based-Conference-Day-Management-System",
   },
   {
-    id: 7,
+    id: 8,
     title: "Library-Management-System",
     description: "A simple Python-based Library Management System for adding, borrowing, and returning books.",
     technologies: ["Python Datetime module"],
@@ -109,7 +125,7 @@ const projectData = [
     githubLink: "https://github.com/SandunPahasara/-Library-Management-System",
   },
   {
-    id: 8,
+    id: 9,
     title: "Calculator",
     description: "A visually appealing console-based calculator in Java featuring: Colorful ANSI console output Clean, user-friendly interface Basic arithmetic operations Error handling and input validation Beautiful ASCII art formatting Features",
     technologies: ["Java"],
@@ -125,7 +141,7 @@ const projectData = [
 
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 4;
+  const projectsPerPage = 6;
 
   // Calculate pagination
   const indexOfLastProject = currentPage * projectsPerPage;
