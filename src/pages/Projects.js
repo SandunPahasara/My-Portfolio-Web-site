@@ -1,5 +1,6 @@
 import './Projects.css';
 import { FiExternalLink, FiGithub, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FaLinkedin } from 'react-icons/fa';
 import { useState } from 'react';
 
 const projectData = [
@@ -16,7 +17,9 @@ const projectData = [
       "Quality control and defect tracking system",
       "Role-specific interfaces for managers, supervisors, and workers"
     ],
+    image: "/images/sgptos.png", // Add your project image path
     githubLink: "https://github.com/SasinduV0/SGPTOS-FinalProject",
+    linkedinLink: "https://www.linkedin.com/posts/your-profile_sgptos-project-post", // Add your LinkedIn post link
     badge: "Group Project • Final Year"
   },
   {
@@ -32,7 +35,9 @@ const projectData = [
       "Product search and filter capabilities",
       "Responsive design for all devices"
     ],
+    image: "/images/partz.png", // Add your project image path
     githubLink: "https://github.com/SandunPahasara/Party-Items-Web-Application",
+    linkedinLink: "", // Add your LinkedIn post link if available
     badge: "Group Project"
   },
   {
@@ -47,8 +52,10 @@ const projectData = [
       "Accessible and user-friendly interface",
       "Simple vanilla JavaScript interactivity"
     ],
+    image: "/images/bakery.png",
     githubLink: "https://github.com/SandunPahasara/Sweet-Treats-bakery",
-    liveLink: "https://sweet-treats-bakery.vercel.app/"
+    liveLink: "https://sweet-treats-bakery.vercel.app/",
+    linkedinLink: ""
   },
   {
     id: 4,
@@ -63,8 +70,9 @@ const projectData = [
       "Persistent storage using Local Storage",
       "Custom hooks (useLocalStorage) for data management"
     ],
+    image: "/images/todo.png",
     githubLink: "https://github.com/SandunPahasara/ToDo-App",
-
+    linkedinLink: ""
   },
   {
     id: 5,
@@ -79,8 +87,10 @@ const projectData = [
       "Customizable locations (latitude/longitude)",
       "Type-safe code with TypeScript"
     ],
+    image: "/images/weather.png",
     githubLink: "https://github.com/SandunPahasara/Weather-Alerts-App",
-    liveLink: "https://github.com/SandunPahasara/Weather-Alerts-App"
+    liveLink: "https://github.com/SandunPahasara/Weather-Alerts-App",
+    linkedinLink: ""
   },
   {
     id: 6,
@@ -95,7 +105,9 @@ const projectData = [
       "Value limits between -10 and 10",
       "Modern UI with Ant Design components"
     ],
+    image: "/images/counter.png",
     githubLink: "https://github.com/SandunPahasara/Counter",
+    linkedinLink: ""
   },
   {
     id: 7,
@@ -109,7 +121,9 @@ const projectData = [
       " Reminders & Notifications ",
       " Admin Dashboard for Management "
     ],
+    image: "/images/conference.png",
     githubLink: "https://github.com/SandunPahasara/Web-Based-Conference-Day-Management-System",
+    linkedinLink: ""
   },
   {
     id: 8,
@@ -122,7 +136,9 @@ const projectData = [
       " View available and borrowed books ",
       " User-friendly menu interface "
     ],
+    image: "/images/library.png",
     githubLink: "https://github.com/SandunPahasara/-Library-Management-System",
+    linkedinLink: ""
   },
   {
     id: 9,
@@ -135,7 +151,9 @@ const projectData = [
       " Multiplication",
       "Division"
     ],
+    image: "/images/calculator.png",
     githubLink: "https://github.com/SandunPahasara/Calculator",
+    linkedinLink: ""
   }
 ];
 
@@ -165,6 +183,12 @@ const Projects = () => {
       <div className="projects-grid">
         {currentProjects.map((project) => (
           <div key={project.id} className="project-card">
+            {project.image && (
+              <div className="project-image">
+                <img src={project.image} alt={project.title} />
+              </div>
+            )}
+            
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
               {project.badge && <span className="project-badge">{project.badge}</span>}
@@ -203,6 +227,16 @@ const Projects = () => {
                   className="project-link"
                 >
                   <FiExternalLink /> Live Demo
+                </a>
+              )}
+              {project.linkedinLink && (
+                <a 
+                  href={project.linkedinLink} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-link linkedin-link"
+                >
+                  <FaLinkedin /> LinkedIn
                 </a>
               )}
             </div>
