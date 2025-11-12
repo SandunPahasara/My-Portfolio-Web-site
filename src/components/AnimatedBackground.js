@@ -7,11 +7,10 @@ const AnimatedBackground = () => {
         <div key={i} className="bubble" style={{
           left: `${Math.random() * 100}%`,
           bottom: `${Math.random() * 100}%`,
-          width: `${Math.random() * 30 + 10}px`,
-          height: `${Math.random() * 30 + 10}px`,
-          animationDuration: `${Math.random() * 20 + 10}s`,
-          animationDelay: `${Math.random() * 5}s`,
-          opacity: Math.random() * 0.4 + 0.1
+          width: `${Math.random() * 40 + 20}px`,
+          height: `${Math.random() * 40 + 20}px`,
+          animationDuration: `${Math.random() * 15 + 10}s`,
+          animationDelay: `${Math.random() * 5}s`
         }} />
       ))}
     </div>
