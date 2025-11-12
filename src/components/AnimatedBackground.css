@@ -1,27 +1,41 @@
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
+﻿.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  background: transparent;
+  pointer-events: none;
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  animation: floatUp linear infinite;
+  will-change: transform, opacity;
+}
+
+/* Light mode bubbles - MORE visible */
+.bubble {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.4), rgba(118, 75, 162, 0.4));
+  box-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+}
+
+/* Dark mode bubbles - VERY visible and glowing */
+[data-theme="dark"] .bubble {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.5), rgba(118, 75, 162, 0.5));
+  box-shadow: 0 0 40px rgba(102, 126, 234, 0.6), 0 0 60px rgba(118, 75, 162, 0.4);
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
   }
-  
-  .bubble {
-    position: absolute;
-    border-radius: 500%;
-    background: rgba(21, 50, 215, 0.3);
-    animation: floatUp linear infinite;
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
   }
-  
-  @keyframes floatUp {
-    0% {
-      transform: translateY(0) rotate(0deg);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(-100vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
+}
