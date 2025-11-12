@@ -1,6 +1,9 @@
 .contact-section {
   padding: 5rem 2rem;
-  color: #333;
+  padding-top: 7rem;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  min-height: 100vh;
 }
 
 .section-header {
@@ -10,11 +13,11 @@
 
 .section-title {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: var(--text-primary);
 }
 
 .section-subtitle {
-  color: #6c757d;
+  color: var(--text-secondary);
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
@@ -30,10 +33,11 @@
 }
 
 .contact-form {
-  background: white;
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px var(--shadow);
+  border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -44,39 +48,49 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
+  color: var(--text-primary);
 }
 
 .required {
-  color: #e63946;
+  color: #ef4444;
 }
 
 input, textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
-  transition: border 0.3s ease;
+  transition: border 0.3s ease, background-color 0.3s ease;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
 }
 
 input:focus, textarea:focus {
   outline: none;
-  border-color: #3b82f6;
+  border-color: var(--primary);
+  background-color: var(--card-bg);
 }
 
 .error {
-  border-color: #e63946;
+  border-color: #ef4444;
 }
 
 .error-message {
-  color: #e63946;
+  color: #ef4444;
   font-size: 0.8rem;
   margin-top: 0.3rem;
   display: block;
 }
 
 .submit-btn {
-  background: #3b82f6;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -86,11 +100,13 @@ input:focus, textarea:focus {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .submit-btn:hover {
-  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 .btn-icon {
@@ -98,16 +114,18 @@ input:focus, textarea:focus {
 }
 
 .contact-info {
-  background: #2c3e50;
-  color: white;
+  background: var(--card-bg);
+  color: var(--text-primary);
   padding: 2rem;
   border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 5px 15px var(--shadow);
 }
 
 .info-title {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  color: white;
+  color: var(--text-primary);
 }
 
 .info-item {
@@ -119,22 +137,23 @@ input:focus, textarea:focus {
 
 .info-icon {
   font-size: 1.2rem;
-  color: #3b82f6;
+  color: var(--primary);
   margin-top: 0.3rem;
 }
 
 .info-item h4 {
   margin-bottom: 0.3rem;
   font-size: 1.1rem;
+  color: var(--text-primary);
 }
 
 .info-item a, .info-item p {
-  color: #adb5bd;
+  color: var(--text-secondary);
   transition: color 0.3s ease;
 }
 
 .info-item a:hover {
-  color: #3b82f6;
+  color: var(--primary);
 }
 
 .social-links {
@@ -143,6 +162,7 @@ input:focus, textarea:focus {
 
 .social-links h4 {
   margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .social-icons {
@@ -152,12 +172,13 @@ input:focus, textarea:focus {
 
 .social-icon {
   font-size: 1.5rem;
-  color: #adb5bd;
-  transition: color 0.3s ease;
+  color: var(--text-secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #3b82f6;
+  color: var(--primary);
+  transform: scale(1.1);
 }
 
 .availability {
