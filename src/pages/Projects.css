@@ -1,6 +1,8 @@
 .projects-section {
   padding: 5rem 2rem;
-  
+  padding-top: 7rem;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
 }
 
 .section-header {
@@ -10,11 +12,11 @@
 
 .section-title {
   font-size: 2.5rem;
-  color: #2c3e50;
+  color: var(--text-primary, #2c3e50);
 }
 
 .section-subtitle {
-  color: #6c757d;
+  color: var(--text-secondary, #6c757d);
   font-size: 1.1rem;
   max-width: 700px;
   margin: 0 auto;
@@ -29,18 +31,37 @@
 }
 
 .project-card {
-  background: white;
+  background: var(--card-bg, white);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px var(--shadow, rgba(0,0,0,0.1));
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  border: 1px solid var(--border-color, transparent);
 }
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px var(--shadow, rgba(0,0,0,0.15));
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
 }
 
 .project-content {
@@ -50,7 +71,7 @@
 
 .project-title {
   font-size: 1.5rem;
-  color: #2c3e50;
+  color: var(--text-primary, #2c3e50);
   margin-bottom: 1rem;
 }
 
@@ -69,7 +90,7 @@
 }
 
 .project-description {
-  color: #495057;
+  color: var(--text-secondary, #495057);
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -80,7 +101,7 @@
 
 .project-features h4 {
   font-size: 1.1rem;
-  color: #2c3e50;
+  color: var(--text-primary, #2c3e50);
   margin-bottom: 0.5rem;
 }
 
@@ -90,7 +111,7 @@
 
 .project-features li {
   margin-bottom: 0.3rem;
-  color: #495057;
+  color: var(--text-secondary, #495057);
 }
 
 .tech-tags {
@@ -101,17 +122,19 @@
 }
 
 .tech-tag {
-  background: #e9ecef;
-  color: #495057;
+  background: var(--bg-secondary, #e9ecef);
+  color: var(--text-secondary, #495057);
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
+  border: 1px solid var(--border-color, transparent);
 }
 
 .project-links {
   display: flex;
-  border-top: 1px solid #e9ecef;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--border-color, #e9ecef);
   padding: 1rem 1.5rem;
   gap: 1rem;
 }
@@ -123,7 +146,28 @@
   color: #3b82f6;
   font-weight: 500;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.project-link:hover {
+  color: #2563eb;
+  transform: translateY(-2px);
+  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.project-link.linkedin-link {
+  color: #0077b5;
+}
+
+.project-link.linkedin-link:hover {
+  color: #005582;
+  background: rgba(0, 119, 181, 0.1);
+  border-color: rgba(0, 119, 181, 0.3);
 }
 
 .project-link:hover {
@@ -149,19 +193,19 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.7rem 1.5rem;
-  background: white;
-  border: 2px solid #e9ecef;
+  background: var(--card-bg, white);
+  border: 2px solid var(--border-color, #e9ecef);
   border-radius: 8px;
-  color: #495057;
+  color: var(--text-secondary, #495057);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .pagination-btn:hover:not(:disabled) {
-  background: #3b82f6;
+  background: var(--primary, #3b82f6);
   color: white;
-  border-color: #3b82f6;
+  border-color: var(--primary, #3b82f6);
 }
 
 .pagination-btn:disabled {
@@ -180,19 +224,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
-  border: 2px solid #e9ecef;
+  background: var(--card-bg, white);
+  border: 2px solid var(--border-color, #e9ecef);
   border-radius: 8px;
-  color: #495057;
+  color: var(--text-secondary, #495057);
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .pagination-number:hover {
-  background: #f8f9fa;
-  border-color: #3b82f6;
-  color: #3b82f6;
+  background: var(--bg-secondary, #f8f9fa);
+  border-color: var(--primary, #3b82f6);
+  color: var(--primary, #3b82f6);
 }
 
 .pagination-number.active {
