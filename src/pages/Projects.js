@@ -1,4 +1,5 @@
-import './Projects.css';
+"use client";
+
 import { FiExternalLink, FiGithub, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { FaLinkedin } from 'react-icons/fa';
 import { useState } from 'react';
@@ -17,7 +18,7 @@ const projectData = [
       "Quality control and defect tracking system",
       "Role-specific interfaces for managers, supervisors, and workers"
     ],
-    image: "/images/sgptos.png", // Add your project image path
+    image: "/images/SGPTOS.png", 
     githubLink: "https://github.com/SasinduV0/SGPTOS-FinalProject",
     linkedinLink: "https://www.linkedin.com/posts/your-profile_sgptos-project-post", // Add your LinkedIn post link
     badge: "Group Project • Final Year"
@@ -35,9 +36,9 @@ const projectData = [
       "Product search and filter capabilities",
       "Responsive design for all devices"
     ],
-    image: "/images/partz.png", // Add your project image path
+    image: "/images/Party.png", 
     githubLink: "https://github.com/SandunPahasara/Party-Items-Web-Application",
-    linkedinLink: "", // Add your LinkedIn post link if available
+    linkedinLink: "https://www.linkedin.com/posts/sandun-pahasara-weerasinghe-b03462306_enterprisesoftwaredevelopment-groupproject-activity-7391315786826608640-fmLc?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE4FibMBTfhAkQ_Wkmnj0KdXvau46IL63b0", 
     badge: "Group Project"
   },
   {
@@ -52,10 +53,10 @@ const projectData = [
       "Accessible and user-friendly interface",
       "Simple vanilla JavaScript interactivity"
     ],
-    image: "/images/bakery.png",
+    image: "/images/baked.png",
     githubLink: "https://github.com/SandunPahasara/Sweet-Treats-bakery",
     liveLink: "https://sweet-treats-bakery.vercel.app/",
-    linkedinLink: ""
+    linkedinLink: "https://www.linkedin.com/posts/sandun-pahasara-weerasinghe-b03462306_just-published-sweet-treats-a-bakery-landing-activity-7380957242038140928-WZ1t?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE4FibMBTfhAkQ_Wkmnj0KdXvau46IL63b0"
   },
   {
     id: 4,
@@ -70,9 +71,9 @@ const projectData = [
       "Persistent storage using Local Storage",
       "Custom hooks (useLocalStorage) for data management"
     ],
-    image: "/images/todo.png",
+    image: "/images/TODO.png",
     githubLink: "https://github.com/SandunPahasara/ToDo-App",
-    linkedinLink: ""
+    linkedinLink: ""//change thisafter updating
   },
   {
     id: 5,
@@ -87,10 +88,10 @@ const projectData = [
       "Customizable locations (latitude/longitude)",
       "Type-safe code with TypeScript"
     ],
-    image: "/images/weather.png",
+    image: "/images/Weather.png",
     githubLink: "https://github.com/SandunPahasara/Weather-Alerts-App",
     liveLink: "https://github.com/SandunPahasara/Weather-Alerts-App",
-    linkedinLink: ""
+    linkedinLink: "https://www.linkedin.com/posts/sandun-pahasara-weerasinghe-b03462306_react-webdevelopment-typescript-activity-7373740026691489792-z3WG?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE4FibMBTfhAkQ_Wkmnj0KdXvau46IL63b0"
   },
   {
     id: 6,
@@ -107,7 +108,7 @@ const projectData = [
     ],
     image: "/images/counter.png",
     githubLink: "https://github.com/SandunPahasara/Counter",
-    linkedinLink: ""
+    linkedinLink: "https://www.linkedin.com/posts/sandun-pahasara-weerasinghe-b03462306_react-antdesign-webdevelopment-activity-7366931684472152066-3j8C?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAE4FibMBTfhAkQ_Wkmnj0KdXvau46IL63b0"
   },
   {
     id: 7,

@@ -1,4 +1,5 @@
-import './Home.css';
+"use client";
+
 import { FaFileDownload } from 'react-icons/fa';
 
 const Home = () => {
@@ -44,7 +45,7 @@ const Home = () => {
             Explore My Work
           </button>
           <a
-            href={`${process.env.PUBLIC_URL}/SandunPahasara-CV2.pdf`}
+            href="/SandunPahasara-CV2.pdf"
             download="SandunPahasara-CV2.pdf"
             className="btn-secondary"
             aria-label="Download Sandun Pahasara CV"

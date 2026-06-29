@@ -1,6 +1,7 @@
+"use client";
+
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
-import './Navbar.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

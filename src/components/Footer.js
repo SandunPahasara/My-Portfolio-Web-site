@@ -1,5 +1,6 @@
+"use client";
+
 import { useState } from 'react';
-import './Footer.css';
 import { 
   FaFacebook, 
   FaLinkedin, 
@@ -47,7 +48,6 @@ const Footer = () => {
           <a href="https://youtube.com/@sandunpahasara?si=OKpWn-Qd7IdBtoyj" target="_blank" rel="noopener noreferrer">
             <FaYoutube className="icon" title="YouTube" />
           </a>
-      
         </div>
 
         <div className="footer-links">

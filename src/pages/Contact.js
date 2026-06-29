@@ -1,4 +1,5 @@
-import './Contact.css';
+"use client";
+
 import { 
   FaFacebook, 
   FaLinkedin, 

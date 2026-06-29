@@ -1,6 +1,7 @@
+"use client";
+
 import { useTheme } from '../context/ThemeContext';
 import { FiSun, FiMoon } from 'react-icons/fi';
-import './ThemeToggle.css';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme, isDark } = useTheme();

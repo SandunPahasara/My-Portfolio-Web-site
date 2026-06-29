@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useState, useEffect } from 'react';
 
 const ThemeContext = createContext();
@@ -13,20 +15,30 @@ export const useTheme = () => {
 export const ThemeProvider = ({ children }) => {
   // Function to determine theme based on time
   const getTimeBasedTheme = () => {
+    if (typeof window === 'undefined') return 'light';
     const hour = new Date().getHours();
     // Dark mode from 6 PM (18:00) to 6 AM (6:00)
     return (hour >= 18 || hour < 6) ? 'dark' : 'light';
   };
 
-  // Initialize theme from localStorage or time-based default
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme || getTimeBasedTheme();
-  });
+  const [theme, setTheme] = useState('light');
+  const [isManual, setIsManual] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-  const [isManual, setIsManual] = useState(() => {
-    return localStorage.getItem('themeManual') === 'true';
-  });
+  // Initialize theme from localStorage or time-based default after component mounts
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const savedManual = localStorage.getItem('themeManual') === 'true';
+    
+    setIsManual(savedManual);
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      const autoTheme = getTimeBasedTheme();
+      setTheme(autoTheme);
+    }
+    setMounted(true);
+  }, []);
 
   // Toggle theme manually
   const toggleTheme = () => {
@@ -50,13 +62,15 @@ export const ThemeProvider = ({ children }) => {
 
   // Apply theme to document
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
+    if (mounted) {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    }
+  }, [theme, mounted]);
 
   // Auto-update theme based on time if not manually set
   useEffect(() => {
-    if (!isManual) {
+    if (mounted && !isManual) {
       const interval = setInterval(() => {
         const autoTheme = getTimeBasedTheme();
         if (autoTheme !== theme) {
@@ -66,7 +80,7 @@ export const ThemeProvider = ({ children }) => {
 
       return () => clearInterval(interval);
     }
-  }, [theme, isManual]);
+  }, [theme, isManual, mounted]);
 
   const value = {
     theme,

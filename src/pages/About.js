@@ -1,4 +1,3 @@
-import './About.css';
 import { FaReact, FaNodeJs, FaDatabase, FaCode, FaMobile } from 'react-icons/fa';
 import { SiJavascript, SiTypescript, SiRedux, SiGraphql, SiFirebase } from 'react-icons/si';
 

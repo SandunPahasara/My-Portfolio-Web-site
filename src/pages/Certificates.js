@@ -1,4 +1,3 @@
-import './Certificates.css';
 import { FaAward, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Certificates = () => {
